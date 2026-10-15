@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corical · Developer</title>
+<meta name="description" content="Software projects by Corical, a developer in South Africa: AI memory servers, desktop tools, browser games and learning apps.">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --text: #1c1b18;
+    --muted: #5d5a52;
+    --border: #e3e0d7;
+    --accent: #2f6f4f;
+    --tag-bg: #eef3ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151614;
+      --surface: #1e201d;
+      --text: #ecebe6;
+      --muted: #a4a299;
+      --border: #30332e;
+      --accent: #7cc49b;
+      --tag-bg: #253029;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #151614;
+    --surface: #1e201d;
+    --text: #ecebe6;
+    --muted: #a4a299;
+    --border: #30332e;
+    --accent: #7cc49b;
+    --tag-bg: #253029;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: none; padding: 48px 16px 32px; }
+  header { margin-bottom: 40px; }
+  h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .lede { color: var(--muted); font-size: 1.15rem; margin: 0 0 16px; }
+  .links a { margin-right: 18px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 16px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 1.3rem; }
+  .card p { margin: 0 0 14px; color: var(--muted); flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .tag { background: var(--tag-bg); color: var(--text); font-size: 0.8rem; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .card .actions a { margin-right: 14px; white-space: nowrap; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Corical</h1>
+    <p class="lede">Software developer in South Africa. I build tools for AI agents, small desktop utilities, and browser games.</p>
+    <div class="links">
+      <a href="https://github.com/Corical">GitHub</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Grysstof</h3>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">Deno</span><span class="tag">MCP</span><span class="tag">Postgres / pgvector</span></div>
+        <p>A shared memory for AI tools that doesn't care where it's stored. A rebuild of Nate B. Jones's Open Brain in which storage, AI models, login and logging are each swappable parts: Supabase, Postgres in Docker, or a plain JSON file. It adds a fact ledger, multiple tenants and a browse page.</p>
+        <div class="actions"><a href="https://github.com/Corical/grysstof">Source</a></div>
+      </article>
+
+      <article class="card">
+        <h3>LipService</h3>
+        <div class="tags"><span class="tag">Windows</span><span class="tag">Speech-to-text</span><span class="tag">Tauri</span></div>
+        <p>Free voice-to-text for Windows. Hold Ctrl+Shift+Space, speak and release. Your words are transcribed, cleaned up and pasted into whatever app you're typing in. It lives in the system tray, and its updates are signed and checked before they install.</p>
+        <div class="actions"><a href="https://github.com/Corical/lipservice-releases/releases/latest">Download</a></div>
+      </article>
+
+      <article class="card">
+        <h3>Crowd Runner</h3>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">Babylon.js</span><span class="tag">3D</span></div>
+        <p>A 3D crowd-runner game in the style of Count Masters. Steer a crowd of stickmen through multiplier gates and past enemy crowds. It uses instanced rendering for 100+ stickmen and supports keyboard and touch controls.</p>
+        <div class="actions"><a href="https://github.com/Corical/CrowdRunner">Source</a></div>
+      </article>
+
+      <article class="card">
+        <h3>Gun Runner</h3>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">Babylon.js</span><span class="tag">Vite</span></div>
+        <p>A browser runner game built on Babylon.js and Vite.</p>
+        <div class="actions"><a href="https://github.com/Corical/GunRunner">Source</a></div>
+      </article>
+
+      <article class="card">
+        <h3>Natuurwetenskappe Quiz</h3>
+        <div class="tags"><span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">Afrikaans</span></div>
+        <p>An interactive quiz for Grade 5 Natural Sciences (Afrikaans curriculum, Term 4). It covers Earth movement, soil types, sedimentary rocks and fossils, with shuffled questions, instant feedback and a review mode.</p>
+        <div class="actions"><a href="https://natuur-wetenskap.vercel.app">Live</a><a href="https://github.com/Corical/NatuurWetenskap">Source</a></div>
+      </article>
+    </div>
+  </section>
+
+  <footer>Hosted on GitHub Pages.</footer>
+</main>
+</body>
+</html>
